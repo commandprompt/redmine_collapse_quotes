@@ -1,5 +1,11 @@
 $(function() {
-  $('#history > div.has-notes').each(function(i) {
+  let hist_selector = '#history > div.has-notes';
+  // redmine v4 has different journal layout, try to autodetect the correct selector
+  if($('#tab-content-history').length) {
+    hist_selector = '#history > #tab-content-history > div.has-notes'
+  }
+
+  $(hist_selector).each(function(i) {
     $(this).find("blockquote").each(function(i) {
       q = $(this);
       if (q.height() < 100)

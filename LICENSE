@@ -1,6 +1,7 @@
 redmine_collapse_quotes -- Redmine plugin to collapse quotes in issue history
 
 Copyright (C) 2011  Alex Shuglin <ash@commandprompt.com>
+Copyright (C) 2020  Eugene Dubinin <eugend@commandprompt.com>
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
