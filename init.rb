@@ -18,14 +18,14 @@
 
 require 'redmine'
 
-require_dependency 'redmine_collapse_quotes/view_hooks'
+require_relative 'lib/redmine_collapse_quotes/view_hooks'
 
 Redmine::Plugin.register :redmine_collapse_quotes do
   name 'Redmine Collapse Quotes plugin'
   author 'Eugene Dubinin <eugend@commandprompt.com>, Alex Shulgin <ash@commandprompt.com>'
   description 'Redmine plugin to collapse large quotes in issue history'
-  version '0.0.2'
+  version '0.0.3'
   url 'https://github.com/commandprompt/redmine_collapse_quotes/'
 
-  requires_redmine :version_or_higher => '3.0.0'
+  requires_redmine :version_or_higher => '5.0.0'
 end
