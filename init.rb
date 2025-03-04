@@ -18,7 +18,11 @@
 
 require 'redmine'
 
-require_relative 'lib/redmine_collapse_quotes/view_hooks'
+if Rails.try(:autoloaders).try(:zeitwerk_enabled?)
+  Rails.autoloaders.main.push_dir File.dirname(__FILE__) + '/lib/redmine_collapse_quotes'
+else
+  require_relative 'lib/redmine_collapse_quotes/view_hooks'
+end
 
 Redmine::Plugin.register :redmine_collapse_quotes do
   name 'Redmine Collapse Quotes plugin'
